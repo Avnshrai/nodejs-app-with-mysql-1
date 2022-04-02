@@ -18,7 +18,7 @@ pipeline{
 		stage('Build for frontend image') {
 
 			steps {
-				sh "docker build -t avnshrai/frontend:latest FrontEnd/."
+				sh "docker build -t avnshrai/frontend:latest frontend/."
 				// sh "docker build -t rajputvikram/frontend:v${env.BUILD_ID} FrontEnd/."
                 // sh "docker tag rajputvikram/frontend:v${env.BUILD_ID} nadeem90/frontend:latest"
 			}
