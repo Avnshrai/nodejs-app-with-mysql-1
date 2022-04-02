@@ -2,9 +2,9 @@ pipeline{
 
 	agent any{
 
-// 	environment {
-// 		DOCKERHUB_CREDENTIALS=credentials('docker_hub_node_app')
-// 	}
+	environment {
+		DOCKERHUB_CREDENTIALS=credentials('docker')
+	}
 
 // 	stages {
 	    
@@ -45,9 +45,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-			    withCredentials([string(credentialsId: 'docker-pwd', variable: 'docker_pass')]){
-                sh "docker login -u avnshrai -p ${docker_pass}"
-			    }
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
 		}
 
