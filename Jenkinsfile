@@ -2,18 +2,18 @@ pipeline{
 
 	agent any
 
-	environment {
-		DOCKERHUB_CREDENTIALS=credentials('docker_hub_node_app')
-	}
+// 	environment {
+// 		DOCKERHUB_CREDENTIALS=credentials('docker_hub_node_app')
+// 	}
 
-	stages {
+// 	stages {
 	    
-	    stage('gitclone') {
+// 	    stage('gitclone') {
 
-			steps {
-				git "https://github.com/Avnshrai/nodejs-app-with-mysql-1.git"
-			}
-		}
+// 			steps {
+// 				git "https://github.com/Avnshrai/nodejs-app-with-mysql-1.git"
+// 			}
+// 		}
 
 		stage('Build for frontend image') {
 
