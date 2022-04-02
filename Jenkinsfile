@@ -66,4 +66,5 @@ pipeline{
                 sh 'docker rmi -f avnshrai/mysql:latest'
 			}
 		}
+	}
 }		
