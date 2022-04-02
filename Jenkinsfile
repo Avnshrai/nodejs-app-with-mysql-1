@@ -36,7 +36,7 @@ pipeline{
         stage('Build for mysql image') {
 
 			steps {
-				sh "docker build -t rajputvikram/mysql:latest db/."
+				sh "docker build -t rajputvikram/mysql:latest mysqldb/."
 				// sh "docker build -t rajputvikram/mysql:v${env.BUILD_ID} db/."
                 // sh "docker tag rajputvikram/mysql:v${env.BUILD_ID} rajputvikram/mysql:latest"
 			}
