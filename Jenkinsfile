@@ -6,7 +6,7 @@ pipeline{
 		DOCKERHUB_CREDENTIALS=credentials('docker')
 	}
 
-// 	stages {
+	stages {
 	    
 // 	    stage('gitclone') {
 
